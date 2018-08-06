@@ -12,9 +12,11 @@
     "test_prev": "npm run unit && npm run e2e",
     "lint": "eslint --ext .js,.vue src test/unit test/e2e/specs",
     "build": "node build/build.js",
-    "test": "cross-env NODE_ENV=test nyc mocha-webpack --webpack-config build/webpack.base.conf.js --require test/setup.js test/**/*.spec.js"
+    "test": "cross-env NODE_ENV=test nyc mocha-webpack --webpack-config build/webpack.base.conf.js --require test/setup.js test/**/*.spec.js",
+    "api_test": "newman run test/postman/API_testing.postman_collection.json -e test/postman/api_testing.postman_environment.json"
   },
   "dependencies": {
+    "newman": "^3.10.0",
     "vue": "^2.5.2",
     "vue-router": "^3.0.1"
   },
