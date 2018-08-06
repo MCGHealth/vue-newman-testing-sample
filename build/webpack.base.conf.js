@@ -4,6 +4,12 @@ const utils = require('./utils')
 const config = require('../config')
 const vueLoaderConfig = require('./vue-loader.conf')
 
+if (process.env.NODE_ENV === 'test'){
+  module.exports.externals = [require('webpack-node-externals')()]
+  module.exports.devtool = 'inline-cheap-module-source-map'
+
+}
+
 function resolve (dir) {
   return path.join(__dirname, '..', dir)
 }

@@ -6,6 +6,6 @@ describe('HelloWorld.vue', function () {
     it('Checking <h2> tag text', function () {
         const wrapper = shallow(HelloWorld)
         const h2 = wrapper.find('h2')
-        expect(h2.text()).toBe('Essential Links')
+        expect(h2.text()).toEqual('Essential Links')
     })
 })
