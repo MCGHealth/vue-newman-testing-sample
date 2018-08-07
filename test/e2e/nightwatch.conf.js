@@ -33,7 +33,10 @@ module.exports = {
         javascriptEnabled: true,
         acceptSslCerts: true,
         "chromeOptions": {
-          "args" : ["--no-sandbox"]
+          "args" : ["--no-sandbox",
+          "headless",
+          "disable-web-security",
+          "ignore-certificate-errors"]
         }
       }
     },
